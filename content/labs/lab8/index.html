@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://i.pinimg.com/originals/b4/48/74/b44874eb14391fc9bcb2425f6ca94f60.jpg" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        function correct(button) {
+            button.style.backgroundColor = 'green';
+            document.querySelector('#feedback1').innerHTML = 'Correto!';
+        }
+
+        function incorrect(button) {
+            button.style.backgroundColor = 'red';
+            document.querySelector('#feedback1').innerHTML = 'Incorreto!';
+        }
+        
+                function checkAnswer() {
+            let answer = document.querySelector('#answer').value.toLowerCase();
+            if (answer === 'terra') {
+                document.querySelector('#feedback2').innerHTML = 'Correto!';
+            } 
+            else if {
+                document.querySelector('#feedback2').innerHTML = 'Incorreto!';
+            }
+            else (answer === '') {
+                documentt.querySelector('#feddback2').innerHTML = 'Por favor, insira uma resposta antes de verificar.';
+            }
+        }
+    })
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Quantos planetas com anéis há no Sistema Solar?</h3>
+                <button onclick="incorrect()">a) 5 planetas</button>
+                <button onclick="incorrect()">b) 2 planeta</button>
+                <button onclick="correct()">c) 4 planetas</button>
+                <button onclick="incorrect()">d) NDA</button>
+                <p id="feedback1"></p>
+                <p><a href="resposta1.html">Explicação</a></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>Qual é o terceiro planeta do sistema solar?</h3>
+                <input type="text" id="answer"></input>
+                <button onclick="checkAnswer()">Check Answer</button>
+                <p id="feedback2"></p>
+                <p><a href="resposta2.html">Explicação</a></p>
+
+            </div>
+        </div>
+    </body>
+</html>
